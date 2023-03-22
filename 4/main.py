@@ -70,11 +70,11 @@ class ciagi:
                 self.wartosci.append(elem)
 
     def pobierz_parametry(self):
-        self.pierwsza = float(input("Podaj pierwszy element: "))
-        self.roznica = float(input("Podaj roznice miedzy elementami: "))
-        self.ilosc_elem =  int(input("podaj ilosc elementow ciagu: "))
-        for i in range(self.ilosc_elem):
-            self.wartosci.append(self.pierwsza + i*self.roznica)
+        pierwsza = float(input("Podaj pierwszy element: "))
+        roznica = float(input("Podaj roznice miedzy elementami: "))
+        ilosc_elem = int(input("podaj ilosc elementow ciagu: "))
+        for i in range(ilosc_elem):
+            self.wartosci.append(pierwsza + i*roznica)
 
     def policz_sume(self):
         return sum(self.wartosci)
