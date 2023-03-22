@@ -70,26 +70,26 @@ class ciagi:
                 self.wartosci.append(elem)
 
     def pobierz_parametry(self):
-        pierwsza = float(input("Podaj pierwszy element: "))
-        roznica = float(input("Podaj roznice miedzy elementami: "))
-        ilosc_elem = int(input("podaj ilosc elementow ciagu: "))
-        for i in range(ilosc_elem):
-            self.wartosci.append(pierwsza + i*roznica)
+        self.pierwsza = float(input("Podaj pierwszy element: "))
+        self.roznica = float(input("Podaj roznice miedzy elementami: "))
+        self.ilosc_elem = int(input("podaj ilosc elementow ciagu: "))
+
 
     def policz_sume(self):
         return sum(self.wartosci)
 
-    #def policz_elementy(self):
-        # nie rozumiem pytania
+    def policz_elementy(self):
+        for i in range(self.ilosc_elem):
+            self.wartosci.append(self.pierwsza + i * self.roznica)
 
 
 
 # obiek = ciagi()
 # obiek.pobierz_elementy()
 # obiek.pobierz_parametry()
-# obiek.wyswietl_dane()
+# obiek.policz_elementy()
 # print(obiek.policz_sume())
-
+# obiek.wyswietl_dane()
 # zad 6
 
 class robaczek:
@@ -113,13 +113,13 @@ class robaczek:
     def pokaz_gdzie_jestes(self):
         print(f"pozycja x to {self.x}, a  pozycja y to {self.y}")
 
-robak = robaczek(0, 0, 2)
-robak.pokaz_gdzie_jestes()
-robak.idz_w_prawo(10)
-robak.pokaz_gdzie_jestes()
-robak.idz_w_dol(13)
-robak.pokaz_gdzie_jestes()
-robak.idz_w_lewo(5)
-robak.pokaz_gdzie_jestes()
-robak.idz_w_gore(13)
-robak.pokaz_gdzie_jestes()
+# robak = robaczek(0, 0, 2)
+# robak.pokaz_gdzie_jestes()
+# robak.idz_w_prawo(10)
+# robak.pokaz_gdzie_jestes()
+# robak.idz_w_dol(13)
+# robak.pokaz_gdzie_jestes()
+# robak.idz_w_lewo(5)
+# robak.pokaz_gdzie_jestes()
+# robak.idz_w_gore(13)
+# robak.pokaz_gdzie_jestes()
