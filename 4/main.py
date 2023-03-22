@@ -99,27 +99,23 @@ class robaczek:
         self.krok = krok
 
     def idz_w_gore(self, ik):
-        ruch = self.y
-        self.y = ruch+(ik*self.krok)
+        self.y = self.y+(ik*self.krok)
     def idz_w_dol(self, ik):
-        ruch = self.y
-        self.y = ruch-(ik*self.krok)
+        self.y = self.y-(ik*self.krok)
     def idz_w_lewo(self, ik):
-        ruch = self.x
-        self.x = ruch-(ik*self.krok)
+        self.x = self.x-(ik*self.krok)
     def idz_w_prawo(self,ik):
-        ruch = self.x
-        self.x = ruch+(ik*self.krok)
+        self.x = self.x+(ik*self.krok)
     def pokaz_gdzie_jestes(self):
         print(f"pozycja x to {self.x}, a  pozycja y to {self.y}")
 
-# robak = robaczek(0, 0, 2)
-# robak.pokaz_gdzie_jestes()
-# robak.idz_w_prawo(10)
-# robak.pokaz_gdzie_jestes()
-# robak.idz_w_dol(13)
-# robak.pokaz_gdzie_jestes()
-# robak.idz_w_lewo(5)
-# robak.pokaz_gdzie_jestes()
-# robak.idz_w_gore(13)
-# robak.pokaz_gdzie_jestes()
+robak = robaczek(0, 0, 2)
+robak.pokaz_gdzie_jestes()
+robak.idz_w_prawo(10)
+robak.pokaz_gdzie_jestes()
+robak.idz_w_dol(13)
+robak.pokaz_gdzie_jestes()
+robak.idz_w_lewo(5)
+robak.pokaz_gdzie_jestes()
+robak.idz_w_gore(13)
+robak.pokaz_gdzie_jestes()
