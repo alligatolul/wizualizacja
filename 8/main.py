@@ -44,24 +44,78 @@ from PIL import Image
 # plt.show()
 
 
-x1 = np.arange(0, 2, 0.02)
-x2 = np.arange(0, 2, 0.02)
+# x1 = np.arange(0, 2, 0.02)
+# x2 = np.arange(0, 2, 0.02)
+#
+# y1 = np.sin(2 * np.pi * x1)
+# y2 = np.cos(2 * np.pi * x2)
 
-y1 = np.sin(2 * np.pi * x1)
-y2 = np.cos(2 * np.pi * x2)
+# plt.subplot(4, 1, 1)
+# plt.plot(x1, y1, 'm')
+# plt.title('Wykres sin(x)')
+# plt.xlabel('x')
+# plt.ylabel('sin(x)')
+#
+# plt.subplot(4, 1, 4)
+# plt.plot(x2, y2, 'g')
+# plt.title('Wykres cos(x)')
+# plt.xlabel('x')
+# plt.ylabel('cos(x)')
+# plt.subplots_adjust(hspace=0.5)
+# plt.show()
 
-plt.subplot(4, 1, 1)
-plt.plot(x1, y1, 'm')
-plt.title('Wykres sin(x)')
-plt.xlabel('x')
-plt.ylabel('sin(x)')
+# fig, axs = plt.subplots(3, 2)
+# axs[0, 0].plot(x1, y1, 'g:')
+# axs[0, 0].set_xlabel('x')
+# axs[0, 0].set_ylabel('sin(x)')
+# axs[0, 0].set_title('Wykres sin(x)')
+#
+# axs[1, 1].plot(x2, y2, 'k-')
+# axs[1, 1].set_xlabel('x')
+# axs[1, 1].set_ylabel('cos(x)')
+# axs[1, 1].set_title('Wykres cos(x)')
+#
+# axs[2, 0].plot(x1, y1, 'm--')
+# axs[2, 0].set_xlabel('x')
+# axs[2, 0].set_ylabel('sin(x)')
+# axs[2, 0].set_title('Wykres sin(x)')
+#
+# fig.delaxes(axs[0,1])
+# fig.delaxes(axs[1,0])
+# fig.delaxes(axs[2,1])
+#
+# plt.show()
 
-plt.subplot(4, 1, 4)
-plt.plot(x2, y2, 'g')
-plt.title('Wykres cos(x)')
-plt.xlabel('x')
-plt.ylabel('cos(x)')
-plt.subplots_adjust(hspace=0.5)
-plt.show()
+
+data = {'Kraj': ['Belgia', 'Indie', 'Brazylia', 'Polska'],
+        'Stolica': ['Bruksela', 'New Delhi', 'Brasilia', 'Warszawa'],
+        'Kontynent': ['Europa', 'Azja', 'Ameryka Południwa', 'Europa'],
+        'Populacja': [11190846, 1303171035, 207847528, 38675467]}
+df = pd.DataFrame(data)
+#
+# grupa = df.groupby('Kontynent')
+# etykiety = list(grupa.groups.keys())
+# wartosc = list(grupa.agg('Populacja').sum())
+#
+# plt.bar(etykiety, wartosc, color=['cyan', 'gray', 'green'])
+# plt.xlabel('Kontynenty')
+# plt.ylabel('Populacja w mld')
+# plt.title('Wykres populacji w kilku krajach')
+# plt.show()
 
 
+# ts = pd.Series(np.random.randn(1000))
+# ts = ts.cumsum()
+# ts.plot()
+# plt.show()
+
+# grupa = df.groupby('Kontynent').agg({'Populacja': ['sum']})
+# # grupa.plot(kind='bar', xlabel='kontynent', ylabel='wartosci w mld', legend=True,
+# #             title='Populacja na kontynentach', rot=0)
+# wykres = grupa.plot.bar()
+# wykres.set_xlabel('kontynent')
+# wykres.set_ylabel('ilosc')
+# wykres.tick_params(axis='x', labelrotation=0)
+# wykres.legend()
+# wykres.set_title('title')
+# plt.show()
