@@ -86,12 +86,12 @@ from PIL import Image
 #
 # plt.show()
 
-
-data = {'Kraj': ['Belgia', 'Indie', 'Brazylia', 'Polska'],
-        'Stolica': ['Bruksela', 'New Delhi', 'Brasilia', 'Warszawa'],
-        'Kontynent': ['Europa', 'Azja', 'Ameryka Południwa', 'Europa'],
-        'Populacja': [11190846, 1303171035, 207847528, 38675467]}
-df = pd.DataFrame(data)
+#
+# data = {'Kraj': ['Belgia', 'Indie', 'Brazylia', 'Polska'],
+#         'Stolica': ['Bruksela', 'New Delhi', 'Brasilia', 'Warszawa'],
+#         'Kontynent': ['Europa', 'Azja', 'Ameryka Południwa', 'Europa'],
+#         'Populacja': [11190846, 1303171035, 207847528, 38675467]}
+# df = pd.DataFrame(data)
 #
 # grupa = df.groupby('Kontynent')
 # etykiety = list(grupa.groups.keys())
